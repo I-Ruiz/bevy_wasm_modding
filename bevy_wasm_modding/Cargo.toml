@@ -7,7 +7,7 @@ license = "MIT OR Apache-2.0"
 name = "bevy_wasm_modding"
 readme = "../README.md"
 repository = "https://github.com/I-Ruiz/bevy_wasm_modding"
-version = "0.19.1"
+version = "0.19.2"
 
 [dependencies]
 anyhow = "1.0"

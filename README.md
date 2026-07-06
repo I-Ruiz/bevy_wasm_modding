@@ -19,21 +19,21 @@ See [examples/cubes](https://github.com/I-Ruiz/bevy_wasm_modding/tree/main/examp
 
 ## Installation
 
-'''rust
+```rust
 rustup add target wasm32-unknown-unknown
-'''
+```
 
 optional (bad installation)
-'''rust
+```rust
 cargo clean
-'''
+```
 
 Now, to build 2 cubes in 2 separate mods
 In root directory,
 
-'''rust
+```rust
 cargo run -p cubes
-'''
+```
 
 Q. So where are the mods?
 A. In examples/cubes/cubes/assets
@@ -43,9 +43,9 @@ Yes. Cubes has a build.rs that builds them into the game.
 If you want to build the mod yourself to test
 In mod_with_bevy directory,
 
-'''rust
+```rust
 cargo build -p mod_with_bevy --target wasm32-unknown-unknown
-'''
+```
 
 However, when building your game (cubes/cubes/src/main.rs) it will
 automatically build the mods. 
@@ -56,7 +56,7 @@ Our protocol crate defines the two message types for communicating between the g
 
 ```toml
 [dependencies]
-bevy_wasm_modding_shared = "0.19.0"
+bevy_wasm_modding_shared = "0.19.2"
 serde = { version = "1.0", features = ["derive"] }
 ```
 
@@ -88,7 +88,7 @@ Our game will import `WasmPlugin` from [`bevy_wasm`](https://crates.io/crates/be
 ```toml
 [dependencies]
 bevy = "0.19.0"
-bevy_wasm = "0.19.0"
+bevy_wasm_modding = "0.19.2"
 my_game_protocol = { git = "https://github.com/username/my_game_protocol" }
 ```
 
@@ -137,7 +137,7 @@ Our mod will import `FFIPlugin` from [`bevy_wasm_modding_sys`](https://crates.io
 
 ```toml
 [dependencies]
-bevy_wasm_modding_sys = "0.19.0"
+bevy_wasm_modding_sys = "0.19.2"
 my_game_protocol = { git = "https://github.com/username/my_game_protocol" }
 ```
 
