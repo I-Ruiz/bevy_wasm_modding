@@ -100,7 +100,7 @@ fn send_messages_to_mods(mut events: MessageWriter<GameMessage>) {
 
 ## Mod
 
-Our mod will import `FFIPlugin` from [`bevy_wasm_sys`](https://crates.io/crates/bevy_wasm_modding_sys), and use it to automatically send and receive messages with the game.
+Our mod will import `FFIPlugin` from [`bevy_wasm_modding_sys`](https://crates.io/crates/bevy_wasm_modding_sys), and use it to automatically send and receive messages with the game.
 
 ```toml
 [dependencies]
