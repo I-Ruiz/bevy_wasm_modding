@@ -17,6 +17,39 @@ See [examples/cubes](https://github.com/I-Ruiz/bevy_wasm_modding/tree/main/examp
 
 [Changelog](https://github.com/I-Ruiz/bevy_wasm_modding/blob/main/CHANGELOG.md)
 
+## Installation
+
+'''rust
+rustup add target wasm32-unknown-unknown
+'''
+
+optional (bad installation)
+'''rust
+cargo clean
+'''
+
+Now, to build 2 cubes in 2 separate mods
+In root directory,
+
+'''rust
+cargo run -p cubes
+'''
+
+Q. So where are the mods?
+A. In examples/cubes/cubes/assets
+
+Q. So did I build the .wasm to wasm32-unknown-unknown?
+Yes. Cubes has a build.rs that builds them into the game.
+If you want to build the mod yourself to test
+In mod_with_bevy directory,
+
+'''rust
+cargo build -p mod_with_bevy --target wasm32-unknown-unknown
+'''
+
+However, when building your game (cubes/cubes/src/main.rs) it will
+automatically build the mods. 
+
 ## Protocol
 
 Our protocol crate defines the two message types for communicating between the game and mods.
