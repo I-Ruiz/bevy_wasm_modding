@@ -8,7 +8,7 @@ use bevy_ecs::{
     message::{MessageReader, MessageWriter},
     system::ResMut,
 };
-use bevy_wasm_shared::prelude::*;
+use bevy_wasm_modding_shared::prelude::*;
 use serde::{de::DeserializeOwned, Serialize};
 
 use crate::{

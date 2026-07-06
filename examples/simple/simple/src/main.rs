@@ -1,7 +1,8 @@
 use bevy::{log::LogPlugin, prelude::*};
-use bevy_wasm::prelude::*;
+use bevy_wasm_modding::prelude::*;
 use simple_protocol::{GameMessage, ModMessage, PROTOCOL_VERSION};
 use bevy::ecs::message::{MessageWriter, Message, MessageReader};
+
 fn main() {
     App::new()
         .add_plugins(LogPlugin::default())

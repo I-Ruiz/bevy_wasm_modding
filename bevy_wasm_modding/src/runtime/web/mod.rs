@@ -14,7 +14,7 @@ use js_sys::{
 };
 use wasm_bindgen::{prelude::Closure, JsCast, JsValue};
 
-use bevy_wasm_shared::version::Version;
+use bevy_wasm_modding_shared::version::Version;
 use web_sys::console;
 
 use crate::{mod_state::ModState, SharedResource};

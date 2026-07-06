@@ -1,4 +1,4 @@
-//! This crate provides the shared code between the bevy_wasm and bevy_wasm_sys.
+//! This crate provides the shared code between the bevy_wasm_modding and bevy_wasm_sys.
 //!
 //! Use this for your protocol crate.
 

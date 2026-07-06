@@ -1,5 +1,5 @@
 use std::{collections::VecDeque, sync::Arc};
-use bevy_wasm_shared::resource_id::{ResourceId, resource_id};
+use bevy_wasm_modding_shared::resource_id::{ResourceId, resource_id};
 // use bevy::utils::{HashMap, Instant, Uuid};
 use std::collections::HashMap;
 use std::time::Instant;

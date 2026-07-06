@@ -8,7 +8,7 @@ use std::{
     ops::Deref,
 };
 
-use bevy_wasm_shared::resource_id::{ResourceId, resource_id};
+use bevy_wasm_modding_shared::resource_id::{ResourceId, resource_id};
 use bevy_ecs::{prelude::*, system::SystemParam};
 // use bevy_reflect::TypeUuid;
 // use bevy_reflect::TypePath;
@@ -67,9 +67,9 @@ impl<T: Any> AsAny for T {
     }
 }
 
-trait AnyResource: AsAny + Any + Resource + Send + Sync + 'static {}
+trait AnyResource: AsAny + Any + Send + Sync + 'static {}
 
-impl<T: Any + Resource + Send + Sync + 'static> AnyResource for T {}
+impl<T: Any + Send + Sync + 'static> AnyResource for T {}
 
 impl dyn AnyResource {
     fn downcast_ref<T: AnyResource>(&self) -> Option<&T> {

@@ -1,7 +1,7 @@
 //! Add this plugin to your Bevy app to enable WASM-based modding
 use tracing::{error, info, warn};
 use bevy::prelude::*;
-use bevy_wasm_shared::prelude::*;
+use bevy_wasm_modding_shared::prelude::*;
 use colored::*;
 
 use crate::{

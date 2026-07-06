@@ -4,9 +4,9 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 name = "shared_resources"
 publish = false
-version = "0.18.0"
+version = "0.19.0"
 
 [dependencies]
-bevy = "0.18.0"
-bevy_wasm = {path = "../../../bevy_wasm"}
+bevy = "0.19.0"
+bevy_wasm_modding = {path = "../../../bevy_wasm_modding"}
 shared_resources_protocol = {path = "../shared_resources_protocol"}

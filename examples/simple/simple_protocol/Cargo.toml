@@ -3,9 +3,9 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 name = "simple_protocol"
 publish = false
-version = "0.18.0"
+version = "0.19.0"
 
 [dependencies]
-bevy_wasm_shared = {path = "../../../bevy_wasm_shared"}
+bevy_wasm_modding_shared = {path = "../../../bevy_wasm_modding_shared"}
 serde = {version = "1.0", features = ["derive"]}
-bevy_ecs = "0.18.0"
+bevy_ecs = "0.19.0"

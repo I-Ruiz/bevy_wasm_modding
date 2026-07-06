@@ -24,7 +24,7 @@ One red, moving left and right, is from our mod that is _NOT_ using Bevy.
 
 ## About
 
-A typical game shipped using `bevy_wasm` is expected to be split into two repositories:
+A typical game shipped using `bevy_wasm_modding` is expected to be split into two repositories:
 
 - The game repository, which contains the game code. (Closed source)
 - The protocol repository, which contains the message structures. (Open source)
@@ -38,5 +38,5 @@ Mod developers should import your protocol library from git, like so:
 ```toml
 [dependencies]
 somecoolgame_protocol = { git = "https://github.com/your-username/somecoolgame_protocol" }
-bevy_wasm_sys = "0.1"
+bevy_wasm_sys = "0.19.0"
 ```

@@ -36,5 +36,5 @@ impl<T> SharedResource for T where T: Resource + Serialize + DeserializeOwned + 
 /// Convinience exports
 pub mod prelude {
     pub use crate::{components::*, plugin::WasmPlugin, Message};
-    pub use bevy_wasm_shared::prelude::*;
+    pub use bevy_wasm_modding_shared::prelude::*;
 }

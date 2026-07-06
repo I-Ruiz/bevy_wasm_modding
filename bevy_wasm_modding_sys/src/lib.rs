@@ -25,7 +25,7 @@ pub mod time;
 pub mod prelude {
     pub use crate::macros::*;
     pub use crate::{error, info, warn};
-    pub use bevy_wasm_shared::prelude::*;
+    pub use bevy_wasm_modding_shared::prelude::*;
 
     #[cfg(feature = "bevy")]
     pub use {

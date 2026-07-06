@@ -1,16 +1,16 @@
 [package]
-edition = "2021"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 name = "simple_mod"
 publish = false
-version = "0.18.0"
+version = "0.19.0"
 
 [lib]
 # Generate a `.wasm` file instead of a dll
 crate-type = ["cdylib"]
 
 [dependencies]
-bevy_ecs = "0.18.0"
-bevy_wasm_sys = {path = "../../../bevy_wasm_sys"}
+bevy_ecs = "0.19.0"
+bevy_wasm_modding_sys = {path = "../../../bevy_wasm_modding_sys"}
 serde = {version = "1.0", features = ["derive"]}
 simple_protocol = {path = "../simple_protocol"}

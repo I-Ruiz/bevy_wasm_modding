@@ -4,7 +4,7 @@ use bevy::{
     prelude::{error, info, warn},
     utils::Uuid,
 };
-use bevy_wasm_shared::version::Version;
+use bevy_wasm_modding_shared::version::Version;
 use colored::*;
 use js_sys::{Object, Reflect, Uint8Array, WebAssembly};
 use wasm_bindgen::{

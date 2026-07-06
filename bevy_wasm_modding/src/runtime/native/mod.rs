@@ -8,8 +8,8 @@ use bevy::{
 use std::collections::HashMap;
 use std::time::Instant;
 
-use bevy_wasm_shared::resource_id::resource_id;
-use bevy_wasm_shared::version::Version;
+use bevy_wasm_modding_shared::resource_id::resource_id;
+use bevy_wasm_modding_shared::version::Version;
 use wasmtime::*;
 
 use crate::{mod_state::ModState, SharedResource};

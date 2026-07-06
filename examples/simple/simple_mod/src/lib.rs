@@ -1,6 +1,7 @@
-use bevy_wasm_sys::prelude::*;
+use bevy_wasm_modding_sys::prelude::*;
 use simple_protocol::{GameMessage, ModMessage, PROTOCOL_VERSION};
 use bevy_ecs::message::{MessageWriter, MessageReader};
+
 #[allow(clippy::missing_safety_doc)]
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn build_app() {

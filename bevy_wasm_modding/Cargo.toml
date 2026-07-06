@@ -1,19 +1,19 @@
 [package]
 categories = ["wasm", "game-development"]
-description = "Run WASM systems in Bevy"
+description = "Run WASM systems for modding in Bevy"
 edition = "2024"
 keywords = ["bevy", "wasm", "webassembly", "game", "gamedev"]
 license = "MIT OR Apache-2.0"
-name = "bevy_wasm"
+name = "bevy_wasm_modding"
 readme = "../README.md"
-repository = "https://github.com/BrandonDyer64/bevy_wasm"
-version = "0.18.0"
+repository = "https://github.com/I-Ruiz/bevy_wasm_modding"
+version = "0.19.0"
 
 [dependencies]
 anyhow = "1.0"
-bevy_wasm_shared = {path = "../bevy_wasm_shared", version = "0.18.0"}
-bevy_ecs = "0.18.0"
-bevy_tasks = "0.18.0"
+bevy_wasm_modding_shared = {path = "../bevy_wasm_modding_shared", version = "0.19.0"}
+bevy_ecs = "0.19.0"
+bevy_tasks = "0.19.0"
 bincode = "1.3"
 colored = "2.0"
 serde = "1.0"
@@ -31,4 +31,4 @@ web-sys = "0.3"
 [dependencies.bevy]
 default-features = false
 features = ["bevy_asset"]
-version = "0.18.0"
+version = "0.19.0"

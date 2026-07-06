@@ -9,7 +9,7 @@ use thiserror::Error;
 
 use tracing::{error, info, warn};
 use serde::Deserialize;
-use bevy_wasm_shared::resource_id::{ResourceId, resource_id};
+use bevy_wasm_modding_shared::resource_id::{ResourceId, resource_id};
 // #[uuid = "4e2a45df-246a-4ab8-91ac-c24218d6a79d"]
 #[derive(Asset, Debug, Deserialize, TypePath)]
 pub struct WasmAsset {

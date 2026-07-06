@@ -1,4 +1,4 @@
-use bevy_wasm_sys::prelude::*;
+use bevy_wasm_modding_sys::prelude::*;
 use cubes_protocol::{HostMessage, ModMessage, PROTOCOL_VERSION};
 use bevy_ecs::{
     message::{MessageWriter, MessageRegistry, Message, MessageReader},

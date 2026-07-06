@@ -1,4 +1,4 @@
-use bevy_wasm_sys::{ecs::extern_res::ExternResources, prelude::*};
+use bevy_wasm_modding_sys::{ecs::extern_res::ExternResources, prelude::*};
 use shared_resources_protocol::{HostMessage, ModMessage, MyCoolResource, PROTOCOL_VERSION};
 use bevy_ecs::{
     message::{MessageWriter, MessageReader},

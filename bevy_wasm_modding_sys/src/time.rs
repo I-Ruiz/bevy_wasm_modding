@@ -73,7 +73,7 @@ impl Time {
     /// Updates the internal time measurements.
     ///
     /// Calling this method as part of your app will most likely result in inaccurate timekeeping,
-    /// as the `Time` resource is ordinarily managed by bevy_wasm.
+    /// as the `Time` resource is ordinarily managed by bevy_wasm_modding.
     pub fn update(&mut self) {
         let now = unsafe { ffi::get_time_since_startup() };
         self.update_with_instant(Duration::from_nanos(now));
@@ -82,7 +82,7 @@ impl Time {
     /// Updates time with a specified [`Duration`].
     ///
     /// This method is provided for use in tests. Calling this method as part of your app will most
-    /// likely result in inaccurate timekeeping, as the `Time` resource is ordinarily managed by bevy_wasm.
+    /// likely result in inaccurate timekeeping, as the `Time` resource is ordinarily managed by bevy_wasm_modding.
     ///
     /// # Examples
     ///

@@ -1,6 +1,6 @@
 
 use bevy_reflect::Reflect;
-use bevy_wasm_shared::prelude::*;
+use bevy_wasm_modding_shared::prelude::*;
 use serde::{Deserialize, Serialize};
 use bevy_ecs::{
     message::Message,

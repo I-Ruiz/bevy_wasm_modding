@@ -1,4 +1,4 @@
-use bevy_wasm_shared::prelude::*;
+use bevy_wasm_modding_shared::prelude::*;
 use serde::{Deserialize, Serialize};
 use bevy_ecs::message::Message;
 /// The version of the protocol. Automatically set from the `CARGO_PKG_XXX` environment variables.

@@ -1,11 +1,11 @@
 use std::time::Instant;
 use tracing::{error, info, warn};
 
-use bevy_wasm_shared::resource_id::{ResourceId, resource_id};
+use bevy_wasm_modding_shared::resource_id::{ResourceId, resource_id};
 use anyhow::Result;
 // use bevy::{prelude::*, utils::Uuid};
 use bevy::prelude::*;
-use bevy_wasm_shared::prelude::*;
+use bevy_wasm_modding_shared::prelude::*;
 use colored::*;
 use wasmtime::*;
 

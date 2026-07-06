@@ -1,5 +1,5 @@
 use bevy::{log::LogPlugin, prelude::*};
-use bevy_wasm::prelude::*;
+use bevy_wasm_modding::prelude::*;
 use shared_resources_protocol::{HostMessage, ModMessage, MyCoolResource, PROTOCOL_VERSION};
 use bevy::ecs::{
     message::{MessageWriter, MessageReader},
