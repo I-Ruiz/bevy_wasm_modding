@@ -4,8 +4,8 @@ Mod your Bevy games with WebAssembly!
 
 [![CI](https://github.com/I-Ruiz/bevy_wasm_modding/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/I-Ruiz/bevy_wasm_modding/actions)
 [![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](https://github.com/I-Ruiz/bevy_wasm_modding#license)
-[![Crates.io](https://img.shields.io/crates/d/bevy_wasm.svg?color=blue)](https://crates.io/crates/bevy_wasm_modding)<br/>
-[![Bevy](https://img.shields.io/badge/bevy-v0.19.0-blueviolet)](https://crates.io/crates/bevy)
+[![Crates.io](https://img.shields.io/crates/d/bevy_wasm_modding.svg?color=blue)](https://crates.io/crates/bevy_wasm_modding)<br/>
+[![Bevy](https://img.shields.io/badge/bevy-v0.19.0-blue)](https://crates.io/crates/bevy)
 
 |                    |                                                                                                                                                                                            |               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
