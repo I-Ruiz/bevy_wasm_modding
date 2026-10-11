@@ -7,11 +7,11 @@ license = "MIT OR Apache-2.0"
 name = "bevy_wasm_modding"
 readme = "../README.md"
 repository = "https://github.com/I-Ruiz/bevy_wasm_modding"
-version = "0.19.2"
+version = "0.19.3"
 
 [dependencies]
 anyhow = "1.0"
-bevy_wasm_modding_shared = {path = "../bevy_wasm_modding_shared", version = "0.19.1"}
+bevy_wasm_modding_shared = {path = "../bevy_wasm_modding_shared", version = "0.19.3"}
 bevy_ecs = "0.19.0"
 bevy_tasks = "0.19.0"
 bincode = "1.3"

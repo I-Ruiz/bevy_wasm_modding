@@ -17,31 +17,44 @@ See [examples/cubes](https://github.com/I-Ruiz/bevy_wasm_modding/tree/main/examp
 
 [Changelog](https://github.com/I-Ruiz/bevy_wasm_modding/blob/main/CHANGELOG.md)
 
+## Version compatibility
+
+|  Bevy   | bevy_wasm_modding                                |
+|  ----   | ------------------------------------------------ |
+| 0.19.0  |     0.19.3                                       |
+
 ## Installation
 
+Now, in root directory (not in examples folder etc...)
 ```rust
 rustup add target wasm32-unknown-unknown
+cargo run -p cubes
+```
+Bad installation that will result in errors is ...
+```rust
+cargo build
 ```
 
+If that is the case ...
+In root directory
 optional (bad installation)
 ```rust
 cargo clean
 ```
 
-Now, to build 2 cubes in 2 separate mods
-In root directory,
+Q. Why does "cargo build" result in errors?
+A. Because your target is to make a .wasm file with target wasm32-unknown-unknown.
 
-```rust
-cargo run -p cubes
-```
+Q. Wha does the command "cargo run -p cubes" do?
+A. Build 2 mods for 2 cubes, 1 using Bevy and 1 without using Bevy.
 
 Q. So where are the mods?
 A. In examples/cubes/cubes/assets
 
 Q. So did I build the .wasm to wasm32-unknown-unknown?
 Yes. Cubes has a build.rs that builds them into the game.
-If you want to build the mod yourself to test
-In mod_with_bevy directory,
+If you want to build the mod yourself to test ...
+Again, in root directory ...
 
 ```rust
 cargo build -p mod_with_bevy --target wasm32-unknown-unknown
@@ -56,7 +69,7 @@ Our protocol crate defines the two message types for communicating between the g
 
 ```toml
 [dependencies]
-bevy_wasm_modding_shared = "0.19.2"
+bevy_wasm_modding_shared = "0.19.3"
 serde = { version = "1.0", features = ["derive"] }
 ```
 
@@ -88,7 +101,7 @@ Our game will import `WasmPlugin` from [`bevy_wasm`](https://crates.io/crates/be
 ```toml
 [dependencies]
 bevy = "0.19.0"
-bevy_wasm_modding = "0.19.2"
+bevy_wasm_modding = "0.19.3"
 my_game_protocol = { git = "https://github.com/username/my_game_protocol" }
 ```
 
@@ -137,7 +150,7 @@ Our mod will import `FFIPlugin` from [`bevy_wasm_modding_sys`](https://crates.io
 
 ```toml
 [dependencies]
-bevy_wasm_modding_sys = "0.19.2"
+bevy_wasm_modding_sys = "0.19.3"
 my_game_protocol = { git = "https://github.com/username/my_game_protocol" }
 ```
 

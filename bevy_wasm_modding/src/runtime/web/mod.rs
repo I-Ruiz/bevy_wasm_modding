@@ -2,11 +2,15 @@ use std::{
     collections::VecDeque,
     sync::{Arc, RwLock},
 };
-
+use bevy_wasm_modding_shared::resource_id::resource_id;
 use anyhow::Result;
 use bevy::{
     prelude::{Component, Resource},
-    utils::{HashMap, Instant},
+ //   platform::collections::HashMap,
+};
+use std::{
+    collections::HashMap,
+    time::Instant,
 };
 use js_sys::{
     Function, Reflect,
@@ -117,12 +121,20 @@ impl WasmInstance {
 
         Ok(serialized_events_out)
     }
-
+/*
     pub fn update_resource_value<T: SharedResource>(&mut self, bytes: Arc<[u8]>) {
         self.mod_state
             .write()
             .unwrap()
             .shared_resource_values
             .insert(T::TYPE_UUID, bytes);
+    }
+    */
+    pub fn update_resource_value<T: SharedResource>(&mut self, bytes: Arc<[u8]>) {
+        self.mod_state
+            .write()
+            .unwrap()
+            .shared_resource_values
+            .insert(resource_id::<T>(), bytes);
     }
 }

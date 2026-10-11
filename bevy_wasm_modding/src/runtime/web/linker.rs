@@ -1,9 +1,8 @@
 use std::sync::{Arc, RwLock};
-
 use bevy::{
     prelude::{error, info, warn},
-    utils::Uuid,
 };
+use bevy_wasm_modding_shared::resource_id::ResourceId;
 use bevy_wasm_modding_shared::version::Version;
 use colored::*;
 use js_sys::{Object, Reflect, Uint8Array, WebAssembly};
@@ -11,7 +10,6 @@ use wasm_bindgen::{
     closure::{IntoWasmClosure, WasmClosure},
     prelude::{Closure, JsValue},
 };
-
 use crate::mod_state::ModState;
 
 fn link<T>(target: &JsValue, name: &str, closure: impl IntoWasmClosure<T> + 'static)
@@ -127,12 +125,12 @@ pub fn build_linker(
         let mod_state = mod_state.clone();
         let memory = memory.clone();
         move |uuid_0, uuid_1, buffer_ptr, buffer_len| -> u32 {
-            let uuid = Uuid::from_u64_pair(uuid_0, uuid_1);
+            let resource_id = ResourceId(uuid_0, uuid_1);
             let resource_bytes = mod_state
                 .write()
                 .unwrap()
                 .shared_resource_values
-                .remove(&uuid);
+                .remove(&resource_id);
             let Some(resource_bytes) = resource_bytes else { return 0 };
             if resource_bytes.len() > buffer_len as usize {
                 error!("Serialized event is too long");
