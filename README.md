@@ -9,7 +9,7 @@ Mod your Bevy games with WebAssembly!
 
 |                    |                                                                                                                                                                                            |               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| `bevy_wasm_modding`        | [![](https://img.shields.io/crates/v/bevy_wasm_modding.svg)](https://crates.io/crates/bevy_wasm_modding) [![](https://docs.rs/bevy_wasm_modding/badge.svg)](https://docs.rs/bevy_wasm)                             | For games     |
+| `bevy_wasm_modding`        | [![](https://img.shields.io/crates/v/bevy_wasm_modding.svg)](https://crates.io/crates/bevy_wasm_modding) [![](https://docs.rs/bevy_wasm_modding/badge.svg)](https://docs.rs/bevy_wasm_modding)                             | For games     |
 | `bevy_wasm_modding_sys`    | [![](https://img.shields.io/crates/v/bevy_wasm_modding_sys.svg)](https://crates.io/crates/bevy_wasm_modding_sys) [![](https://docs.rs/bevy_wasm_modding_sys/badge.svg)](https://docs.rs/bevy_wasm_modding_sys)             | For mods      |
 | `bevy_wasm_modding_shared` | [![](https://img.shields.io/crates/v/bevy_wasm_modding_shared.svg)](https://crates.io/crates/bevy_wasm_modding_shared) [![](https://docs.rs/bevy_wasm_modding_shared/badge.svg)](https://docs.rs/bevy_wasm_modding_shared) | For protocols |
 
