@@ -1,13 +1,12 @@
 use std::{collections::VecDeque, sync::Arc};
 
-use anyhow::{Context, Result};
+use anyhow::Result;
 use bevy::{
     prelude::{Component, Resource},
-//    utils::{HashMap, Instant},
 };
 use std::collections::HashMap;
 use std::time::Instant;
-
+use wasmtime::anyhow::Context;
 use bevy_wasm_modding_shared::resource_id::resource_id;
 use bevy_wasm_modding_shared::version::Version;
 use wasmtime::*;
@@ -45,17 +44,14 @@ impl WasmRuntime {
                 shared_resource_values: HashMap::new(),
             },
         );
-        let instance = build_linker(&self.engine, self.protocol_version)
-            .context("Failed to build a linker for bevy_wasm")?
+        let instance = build_linker(&self.engine, self.protocol_version)?
             .module(&mut store, "", &module)?
             .instantiate(&mut store, &module)?;
 
         // Call `extern "C" fn build_app`
         instance
             .get_typed_func::<(), ()>(&mut store, "build_app")?
-            .call(&mut store, ())
-            .context("Failed to call build_app")?;
-
+            .call(&mut store, ())?;
         Ok(WasmInstance { instance, store })
     }
 }
@@ -78,22 +74,13 @@ impl WasmInstance {
         // Call `extern "C" fn update`
         self.instance
             .get_typed_func::<i32, ()>(&mut self.store, "update")?
-            .call(&mut self.store, app_ptr)
-            .context("Failed to call update")?;
-
+            .call(&mut self.store, app_ptr)?;
         let serialized_events_out = std::mem::take(&mut self.store.data_mut().events_out);
 
         Ok(serialized_events_out)
     }
 
     /// Update the value of a shared resource as seen by the mod
-/*
-    pub fn update_resource_value<T: SharedResource>(&mut self, bytes: Arc<[u8]>) {
-        let state = self.store.data_mut();
-
-        state.shared_resource_values.insert(T::TYPE_UUID, bytes);
-    }
-    */
     pub fn update_resource_value<T: 'static>(&mut self, bytes: Arc<[u8]>) {
         let id = resource_id::<T>();
 
